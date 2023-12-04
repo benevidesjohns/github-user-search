@@ -21,7 +21,7 @@
 
 - <strong>1. Clone the repository:</strong>
   ```bash
-    git clone git@github.com:benevidesjohns/github-user-search.git
+  git clone git@github.com:benevidesjohns/github-user-search.git
   ```
   or
   ```bash
