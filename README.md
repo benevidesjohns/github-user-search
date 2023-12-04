@@ -23,10 +23,10 @@
   ```bash
     git clone git@github.com:benevidesjohns/github-user-search.git
   ```
-  ou
+  or
   ```bash
   git clone https://github.com/benevidesjohns/github-user-search.git
   ```
 
 <h3>:page_facing_up: Licence</h3>
-<p>This project is under license. See the file <a href="https://github.com/benevidesjohns/github-user-search/blob/master/LICENSE">LICENSE</a> for more details </p>
+<p>This project is under license. See the file <a href="https://github.com/benevidesjohns/github-user-search/blob/master/LICENSE">LICENSE</a> for more details. </p>
