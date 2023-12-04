@@ -1,0 +1,198 @@
+* {
+    font-family: 'Nova Square', sans-serif;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #44475a;
+    color: #fff;
+}
+
+header {
+    height: 225px;
+    min-width: 320px;
+    background-color: rebeccapurple;
+}
+
+.github-title {
+    text-align: center;
+    font-size: 50px;
+    color: #c2c2c2;
+}
+
+.header-container {
+    height: calc(100% - 60px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 25px;
+    text-align: center;
+}
+
+.search-container {
+    height: 5.5em;
+    width: 20em;
+    padding: 10px;
+}
+
+.search-container label {
+    cursor: pointer;
+}
+
+.search-area input {
+    width: 75%;
+    height: 30px;
+    margin: 10px 0;
+    padding: 15px;
+    text-align: center;
+    background-color: #44475a;
+    color: #fff;
+    border-radius: 5px;
+    border: 3px solid #8e4eb9;
+    font-size: 18px;
+    font-weight: bold;
+    outline: none;
+}
+
+::placeholder {
+    color: #8d8d8d;
+}
+
+.search-area input:focus {
+    border: 3px solid #7e32b1;
+}
+
+.search-container button {
+    padding: 5px 20px;
+    background-color: #8e4eb9;
+    color: #fff;
+    border-radius: 5px;
+    border: 3px solid #333;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.search-container button:disabled {
+    cursor: not-allowed;
+}
+
+.search-container button:hover {
+    background-color: #7e32b1;
+}
+
+.search-container button:active:not(:disabled) {
+    scale: 0.9;
+}
+
+.container {
+    /* (altura total da tela + margin/gap bottom) - altura do header*/
+    height: calc(100vh - 255px);
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 18px;
+}
+
+.user-area {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.user-image {
+    border-radius: 50%;
+    height: 100px;
+    width: 100px;
+    object-fit: cover;
+    padding: 3px;
+    border: 1px solid #5a5a5a;
+}
+
+.user-name {
+    margin-bottom: 5px;
+}
+
+.repos {
+    width: 100%;
+    margin-bottom: 25px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.repos-area {
+    width: 100%;
+}
+
+.card-repo {
+    width: 600px;
+    height: 175px;
+    min-width: 260px;
+    padding: 12px;
+    box-shadow: -5px 5px 15px -5px #7e32b1;
+    border-radius: 10px;
+    background-color: #282a36;
+}
+
+.private-repo {
+    background-color: #1c1e27;
+    padding: 7px 10px 7px;
+    font-size: 14px;
+    border-radius: 10px;
+}
+
+.description-repo {
+    font-size: 14px;
+}
+
+.title-area-repo {
+    display: flex;
+    justify-content: space-between;
+}
+
+.title-area-repo h3 {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 60vw;
+}
+
+.description-area-repo {
+    padding: 10px 0;
+    min-height: 100px;
+    max-height: 100px;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    text-overflow: ellipsis;
+    color: #8d8d8d;
+}
+
+.others-area-repo {
+    display: flex;
+    gap: 20px;
+}
+
+.title-repositories {
+    padding: 20px 0;
+    text-align: center;
+}
+
+@media (max-width: 480px) {
+    .github-title {
+        font-size: 30px;
+    }
+}
+
+@media (max-width: 640px) {
+    .card-repo {
+        margin-inline: 20px;
+    }
+}

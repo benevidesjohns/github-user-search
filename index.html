@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Page style -->
+    <link rel="stylesheet" href="styles/github.css">
+
+    <!-- Nova Square Font -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Nova+Square&family=Roboto:wght@100;300;400;500;700;900&display=swap"
+        rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+    <title>Github Page</title>
+</head>
+
+<body>
+    <header>
+        <p class="github-title">Github User Search</p>
+        <section class="header-container">
+            <article class="search-container">
+                <i class="fa fa-user fa-user"></i>
+                <label for="inputSearch">Username</label>
+                <div class="search-area">
+                    <input type="text" autocomplete="off" placeholder="Type username here" name="search"
+                        id="inputSearch">
+                </div>
+                <div class="button-area">
+                    <button id="buttonSearch" disabled>Search</button>
+                </div>
+            </article>
+        </section>
+    </header>
+
+    <main>
+        <section class="container">
+            <article class="user-area"></article>
+            <article class="repos-area">
+                <h2 class="title-repositories"></h2>
+                <div class="repos"></div>
+            </article>
+        </section>
+    </main>
+
+    <script src="scripts/github.js"></script>
+</body>
+
+</html>
