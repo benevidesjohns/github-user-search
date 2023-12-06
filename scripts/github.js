@@ -4,6 +4,7 @@ function clearElements() {
     document.querySelector('.user-area').innerHTML = ''
     document.querySelector('.repos').innerHTML = ''
     document.querySelector('.title-repositories').innerHTML = ''
+    document.querySelector('.github-gif-area').style.display = 'none'
 }
 
 // Cria os elementos referentes aos dados do usuário
@@ -93,6 +94,11 @@ function loadUserElements(userData) {
         .forEach(el => document.querySelector('.user-area').appendChild(el))
 }
 
+// Apresenta mensagem de erro devido à falhas na requisição
+function showErrorMessage(area) {
+    area.innerHTML = 'Server error. Try again later.'
+}
+
 // Carrega os elementos referentes aos repositórios do usuário na tela
 function loadRepositoriesElements(repositoriesData) {
     let reposAreaEl = document.querySelector('.repos')
@@ -100,13 +106,14 @@ function loadRepositoriesElements(repositoriesData) {
 
     // Atribui a classe e o título da área de repositórios
     titleRepositoriesEl.classList.add('title-repositories')
-    titleRepositoriesEl.innerHTML = 'Repositories'
+    titleRepositoriesEl.innerHTML = `Repositories (${repositoriesData.length ?? 0})`
 
     // Verifica se a resposta da requisição retorna uma mensagem de erro
-    if ('message' in repositoriesData) {
+    // ou uma lista vazia dos repositórios
+    if ('message' in repositoriesData || !repositoriesData.length) {
         // Cria o elemento descReposEl (p) e define seus atributos
         let descReposEl = document.createElement('p')
-        descReposEl.classList.add('desc-repos')
+        descReposEl.classList.add('custom-area')
         descReposEl.innerHTML = 'Not repository found.'
 
         // Adiciona a descrição na área de repositórios
@@ -153,8 +160,7 @@ function loadRepositoriesElements(repositoriesData) {
 // Gerencia o spinner
 function spinner(isActive) {
     // Desativa o spinner
-    document.querySelector('.lds-ripple')
-        .style.display = isActive
+    document.querySelector('.lds-ripple').style.display = isActive
 }
 
 // Retorna os dados do usuário a partir da requisição da API
@@ -171,7 +177,7 @@ async function getRepositories(username) {
 
 // Executa as requisições da API e carrega
 // os dados dos usuários e seus repositórios na tela
-let loadData = (username, buttonEl) => {
+function loadData(username, buttonEl) {
     // Verifica se existe algum valor no input text
     if (username.value) {
         // Limpa os elementos da tela
@@ -195,6 +201,12 @@ let loadData = (username, buttonEl) => {
                 spinner('none')     //Desativa o spinner
             })
             .catch(error => {
+                // Apresenta a área de erro para o usuário
+                document.querySelector('.github-gif-area').style.display = 'block'
+
+                let errorArea = document.querySelector('.custom-area.error')
+                showErrorMessage(errorArea)                         // Apresenta o erro para o usuário
+
                 console.error('Erro:', error);                      // Apresenta o erro no console
 
                 spinner('none')     //Desativa o spinner

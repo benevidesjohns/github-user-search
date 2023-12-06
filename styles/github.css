@@ -160,10 +160,29 @@ header {
     max-width: 60vw;
 }
 
-.desc-repos {
+.custom-area {
     padding: 20px 0;
     font-size: 1rem;
     font-weight: normal;
+}
+
+.custom-area.h2-custom {
+    font-size: 1.5rem;
+}
+
+.github-gif-area {
+    display: none;
+    margin-top: 50px;
+    text-align: center;
+}
+
+.github-gif-area img {
+    width: 120px;
+}
+
+.github-gif-area p {
+    margin: 10px 0;
+    font-weight: bold;
 }
 
 .description-area-repo {
