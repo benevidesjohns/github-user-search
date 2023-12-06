@@ -29,12 +29,14 @@
             <article class="search-container">
                 <i class="fa fa-user fa-user"></i>
                 <label for="inputSearch">Username</label>
+
                 <div class="search-area">
-                    <input type="text" autocomplete="off" placeholder="Type username here" name="search"
-                        id="inputSearch">
+                    <input type="text" id="inputSearch" autocomplete="off" placeholder="Type username here"
+                        aria-labelledby="inputSearchLabel">
                 </div>
+
                 <div class="button-area">
-                    <button id="buttonSearch" disabled>Search</button>
+                    <button id="buttonSearch" disabled aria-label="Search for GitHub User">Search</button>
                 </div>
             </article>
         </section>
@@ -42,15 +44,18 @@
 
     <main>
         <section class="container">
-            <div class="lds-ripple">
+            <div class="lds-ripple" role="status" aria-live="polite">
                 <div></div>
                 <div></div>
             </div>
+
             <article class="github-gif-area">
-                <img src="assets/img/github-icon.gif" alt="Github Icon Gif">
+                <img src="assets/img/github-icon.gif" alt="Animated Github Icon">
                 <p class="custom-area error h2-custom"></p>
             </article>
+
             <article class="user-area"></article>
+
             <article class="repos-area">
                 <h2 class="title-repositories"></h2>
                 <div class="repos"></div>

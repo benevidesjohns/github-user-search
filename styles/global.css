@@ -25,13 +25,13 @@ body {
 }
 
 @media (max-width: 480px) {
-    .github-title {
+    h1.github-title {
         font-size: 2rem;
     }
 }
 
 @media (max-width: 640px) {
-    .card-repo {
+    a.card-repo {
         margin-inline: 20px;
     }
 }
