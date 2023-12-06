@@ -6,8 +6,7 @@ export function createUserElements(name, avatarUrl, followers) {
 
     // Define os atributos do elemento avatar
     avatarEl.classList.add('user-image')
-    avatarEl.setAttribute('width', '100')
-    avatarEl.setAttribute('alt', 'Image profile')
+    avatarEl.setAttribute('alt', `${name}'s profile image`);
     avatarEl.setAttribute('src', avatarUrl)
 
     // Define os atributos do elemento name e seu conteúdo
@@ -38,7 +37,7 @@ export function createRepositoriesElements(args) {
     privateEl.innerHTML = isPrivate ? 'Private' : 'Public'
 
     // Define o conteúdo do elemento description
-    descriptionEl.innerText = description ?? 'No description'
+    descriptionEl.innerText = description ? description : 'Repository without a description';
 
     // Define o conteúdo do elemento language
     languageEl.innerText = language ?? 'Unknown'

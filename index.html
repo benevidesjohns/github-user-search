@@ -23,18 +23,23 @@
 </head>
 
 <body>
+    <!-- Cabeçalho da página -->
     <header>
         <h1 class="github-title">Github User Search</h1>
+        <!-- Container principal do cabeçalho -->
         <section class="header-container">
+            <!-- Container de pesquisa do usuário -->
             <article class="search-container">
                 <i class="fa fa-user fa-user"></i>
                 <label for="inputSearch">Username</label>
 
+                <!-- Área de pesquisa -->
                 <div class="search-area">
                     <input type="text" id="inputSearch" autocomplete="off" placeholder="Type username here"
                         aria-labelledby="inputSearchLabel">
                 </div>
 
+                <!-- Área do botão de pesquisa -->
                 <div class="button-area">
                     <button id="buttonSearch" disabled aria-label="Search for GitHub User">Search</button>
                 </div>
@@ -42,20 +47,28 @@
         </section>
     </header>
 
+    <!-- Corpo principal da página -->
     <main>
+        <!-- Container principal -->
         <section class="container">
+            <!-- Spinner para indicar carregamento -->
             <div class="lds-ripple" role="status" aria-live="polite">
                 <div></div>
                 <div></div>
             </div>
 
+            <!-- Área do GIF animado do GitHub -->
             <article class="github-gif-area">
                 <img src="assets/img/github-icon.gif" alt="Animated Github Icon">
+
+                <!-- Área personalizada para mensagens de erro -->
                 <p class="custom-area error h2-custom"></p>
             </article>
 
+            <!-- Área para exibir informações do usuário -->
             <article class="user-area"></article>
 
+            <!-- Área para exibir repositórios do usuário -->
             <article class="repos-area">
                 <h2 class="title-repositories"></h2>
                 <div class="repos"></div>
@@ -63,6 +76,7 @@
         </section>
     </main>
 
+    <!-- Importação do arquivo JavaScript responsável por interagir com a API do GitHub -->
     <script type="module" src="scripts/github.js"></script>
 </body>
 
