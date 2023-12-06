@@ -135,6 +135,14 @@ header {
     box-shadow: -5px 5px 15px -5px #7e32b1;
     border-radius: 10px;
     background-color: #282a36;
+    text-decoration: none;
+    color: #fff;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.card-repo:hover {
+    background-color: #363844;
+    transform: scale(1.02);
 }
 
 .private-repo {

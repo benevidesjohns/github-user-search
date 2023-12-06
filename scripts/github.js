@@ -133,6 +133,7 @@ function loadRepositoriesElements(repositoriesData) {
         let description = repo.description
         let language = repo.language
         let stargazers_count = repo.stargazers_count
+        let html_url = repo.html_url
 
         // Define os dados necessários para os dados do repositório
         let repositoryData = [name, private, description, language, stargazers_count]
@@ -145,8 +146,10 @@ function loadRepositoriesElements(repositoriesData) {
         ] = createRepositoriesElements(repositoryData)
 
         // Cria o elemento card (div) e define seus atributos
-        let cardEl = document.createElement('div')
+        let cardEl = document.createElement('a')
         cardEl.classList.add('card-repo')
+        cardEl.target = '_blank'
+        cardEl.href = html_url
 
         // Percorre sobre os elementos e os adiciona na área do card
         createRepoAreaElements([nameAreaElements, othersAreaElements, descriptionAreaElement])
