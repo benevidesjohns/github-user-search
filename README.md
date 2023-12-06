@@ -7,7 +7,7 @@
 <h3>:page_with_curl: Description</h3>
 <p>A front-end application that consumes data from the Github API. The purpose is to provide information about the user and their repositories.</p>
 
-![image](https://github.com/benevidesjohns/github-user-search/assets/84235201/deb9fd0b-432a-4cd4-8e2f-4580e6f54b09)
+![image](https://github.com/benevidesjohns/github-user-search/assets/84235201/fff8a561-18e7-4375-b117-81b4106d84c3)
 
 <h3>:computer: Features</h3>
 
@@ -24,6 +24,7 @@
   git clone git@github.com:benevidesjohns/github-user-search.git
   ```
   or
+  
   ```bash
   git clone https://github.com/benevidesjohns/github-user-search.git
   ```
