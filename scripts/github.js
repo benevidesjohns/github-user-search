@@ -100,7 +100,23 @@ function loadRepositoriesElements(repositoriesData) {
 
     // Atribui a classe e o título da área de repositórios
     titleRepositoriesEl.classList.add('title-repositories')
-    titleRepositoriesEl.innerText = 'Repositories'
+    titleRepositoriesEl.innerHTML = 'Repositories'
+
+    // Verifica se a resposta da requisição retorna uma mensagem de erro
+    if ('message' in repositoriesData) {
+        // Cria o elemento descReposEl (p) e define seus atributos
+        let descReposEl = document.createElement('p')
+        descReposEl.classList.add('desc-repos')
+        descReposEl.innerHTML = 'Not repository found.'
+
+        // Adiciona a descrição na área de repositórios
+        // indicando que nenhum repositório foi encontrado
+        titleRepositoriesEl.appendChild(descReposEl)
+
+        // Interrompe a execução da função, uma vez que
+        // não existem repositórios para serem iterados
+        return
+    }
 
     // Percorre a lista de repositórios do usuário
     for (let repo of repositoriesData) {
