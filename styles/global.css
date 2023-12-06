@@ -1,0 +1,37 @@
+* {
+    font-family: 'Nova Square', sans-serif;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #44475a;
+    color: #fff;
+}
+
+::placeholder {
+    color: #8d8d8d;
+}
+
+.container {
+    /* (altura total da tela + margin/gap bottom) - altura do header*/
+    height: calc(100vh - 255px);
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 1rem;
+}
+
+@media (max-width: 480px) {
+    .github-title {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 640px) {
+    .card-repo {
+        margin-inline: 20px;
+    }
+}

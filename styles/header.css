@@ -1,0 +1,69 @@
+header {
+    height: 225px;
+    min-width: 320px;
+    background-color: #8e4eb9;
+}
+
+.github-title {
+    text-align: center;
+    font-size: 50px;
+    color: #fff;
+}
+
+.header-container {
+    height: calc(100% - 60px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 25px;
+    text-align: center;
+}
+
+.search-container {
+    height: 5.5em;
+    width: 20em;
+    padding: 10px;
+}
+
+.search-container label {
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.search-area input {
+    width: 75%;
+    height: 30px;
+    margin: 10px 0;
+    padding: 15px;
+    text-align: center;
+    background-color: #44475a;
+    color: #fff;
+    border-radius: 5px;
+    border: 3px solid #8e4eb9;
+    font-size: 1rem;
+    font-weight: bold;
+    outline: none;
+}
+
+.search-area input:focus {
+    border: 3px solid #7e32b1;
+}
+
+.search-container button {
+    padding: 5px 20px;
+    background-color: #8e4eb9;
+    color: #fff;
+    border-radius: 5px;
+    border: 3px solid #333;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.search-container button:hover {
+    background-color: #7e32b1;
+}
+
+.search-container button:active:not(:disabled) {
+    scale: 0.9;
+}
